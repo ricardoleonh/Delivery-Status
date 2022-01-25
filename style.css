@@ -14,8 +14,10 @@ body {
     background: url(https://assets.codepen.io/6060109/ZigZag.png);
     background-size: cover;
 }
-
-.panel {
+.panel_left {
+    display: flex;
+}
+.panel_middle {
     width: 70%;
     min-width: 300px;
     height: 600px;
@@ -24,6 +26,10 @@ body {
     box-shadow: 0px 40px 40px -20px #3c7b61;
     border-radius: 5px;
     position: relative;
+}
+
+.panel_right{
+    display: none;
 }
 
 #close-btn {
