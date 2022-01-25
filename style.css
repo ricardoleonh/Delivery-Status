@@ -29,7 +29,7 @@ body {
 }
 
 .panel_right{
-    display: none;
+    display: flex;
 }
 
 #close-btn {
