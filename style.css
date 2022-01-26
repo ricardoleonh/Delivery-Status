@@ -14,10 +14,15 @@ body {
     background: url(https://assets.codepen.io/6060109/ZigZag.png);
     background-size: cover;
 }
-.panel_left {
+.panels {
     display: flex;
+    
 }
-.panel_middle {
+
+.panel_left, .panel_right {
+    display: none;
+}
+.panel_left, .panel_middle, .panel_right {
     width: 70%;
     min-width: 300px;
     height: 600px;
@@ -26,10 +31,6 @@ body {
     box-shadow: 0px 40px 40px -20px #3c7b61;
     border-radius: 5px;
     position: relative;
-}
-
-.panel_right{
-    display: flex;
 }
 
 #close-btn {
@@ -138,4 +139,37 @@ body {
 
 .dot.green {
     background-color: #67bd99 ;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .panel_left, .panel_right {
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #next_btn, #track_btn {
+        width: 100%;
+        padding: 15px 0;
+        color: white;
+        background-color: #BDBDBD;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
+        border: none;
+        border-radius: 5px;
+        font-family: Montserrat;
+        line-height: 18px;
+        font-weight: 800;
+        font-size: 15px;
+        transition: .3s ease all;
+        margin-top: 70px;
+    }
+
+    #next_btn, #track_btn:hover {
+        opacity: .8;
+        transition: .3s ease all;
+        cursor: pointer;
+    }
+
 }
